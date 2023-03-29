@@ -1,1 +1,1 @@
-pip install opencv-python==2.4.9
+opencv-python==2.4.9

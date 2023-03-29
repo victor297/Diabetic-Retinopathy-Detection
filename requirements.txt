@@ -1,1 +1,1 @@
-pip3 install opencv-python == 4.6.0
+pip install opencv-python

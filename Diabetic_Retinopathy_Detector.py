@@ -17,17 +17,19 @@ def set_css():
     st.markdown("""
     <style>
     .stApp {
-        background-color: #c9ffee;
+        background-color: #295953;
     }
     .stButton button {
-        background-color: #295953;
+        background-color: #c9ffee;
         color: #fff;
     }
     </style>
     """, unsafe_allow_html=True)
 def main():
     st.title("Diabetic Retinopathy Detector")
-    uploaded_image = st.file_uploader("Upload The Fundus Image To Get The Results", type=["jpg", "jpeg", "png"])
+    st.subheader("By ABDULWAHAB BALQEES")
+    st.subheader("21D/47CS/01596")
+    uploaded_image = st.file_uploader("Upload Image To Get Result(No DR, Mild, Moderate, Severe, Proliferative DR)", type=["jpg", "jpeg", "png"])
 
     if uploaded_image is not None:
         with st.container():

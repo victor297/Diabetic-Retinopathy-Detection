@@ -29,12 +29,12 @@ def main():
     st.title("Diabetic Retinopathy Detector")
     st.subheader("By ABDULWAHAB BALQEES")
     st.subheader("21D/47CS/01596")
-    uploaded_image = st.file_uploader("Upload Image To Get Result(No DR, Mild, Moderate, Severe, Proliferative DR)", type=["jpg", "jpeg", "png"])
+    uploaded_image = st.file_uploader("Upload Retinopathy Image To Get Result(No DR, Mild, Moderate, Severe, Proliferative DR)", type=["jpg", "jpeg", "png"])
 
     if uploaded_image is not None:
         with st.container():
             st.write('<style>div.stImage>img {display:block;margin-left:auto;margin-right:auto;}</style>', unsafe_allow_html=True)
-            st.image(uploaded_image, caption="Uploaded Fundus Image",width=400,use_column_width=False)
+            st.image(uploaded_image, caption="Uploaded Retinopathy Image",width=400,use_column_width=False)
             image = Image.open(uploaded_image)
             model_path='cnn_model_final.h5'
             model = tf.keras.models.load_model(model_path, compile=False)
@@ -74,7 +74,7 @@ def main():
                 st.success('Proliferative DR')         
             
         else:
-            st.warning("Please upload an Fundus Image to view your results")
+            st.warning("Please upload an Retinopathy Image to view your results")
             
 if __name__ == '__main__':
     set_css()

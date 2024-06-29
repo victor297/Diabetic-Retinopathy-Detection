@@ -21,7 +21,7 @@ def set_css():
     }
     .stButton button {
         background-color: #c9ffee;
-        color: #fff;
+        color: #C70039;
     }
     </style>
     """, unsafe_allow_html=True)

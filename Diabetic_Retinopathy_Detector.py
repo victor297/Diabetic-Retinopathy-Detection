@@ -74,7 +74,7 @@ def main():
                 st.success('Proliferative DR')         
             
         else:
-            st.warning("Please upload an Retinopathy Image to view your results")
+            st.warning("Please upload a Retinopathy Image to view your results")
             
 if __name__ == '__main__':
     set_css()
